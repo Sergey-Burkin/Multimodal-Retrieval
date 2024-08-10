@@ -1,0 +1,6 @@
+.idea
+*__pycache__/
+*/fast_api_env/
+*node_modules*
+*frontend/data/*
+*package-lock.json

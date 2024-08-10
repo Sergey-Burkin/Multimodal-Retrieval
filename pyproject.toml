@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "multimodal-retrival-repo"
+version = "0.1.0"
+description = "multimodal retrieval repository for image and text search"
+authors = ["Sardor Lutfullaev <lutfullaev.si@phystech.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torchvision = "0.17.1"
+torch = "2.2.1"
+tqdm = "4.66.2"
+faiss-cpu = "1.8.0"
+clip = {git = "https://github.com/openai/CLIP.git"}
+numpy = "1.26.4"
+datasets = "2.18.0"
+pytest = "^8.2.0"
+fastapi = {extras = ["all"], version = "^0.111.0"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+sqlalchemy = "2.0.20"
+psycopg = "3.1.10"
+alembic = "1.12.0"
+psycopg2-binary = "^2.9.9"
+asyncpg = "^0.29.0"
+pillow = "^10.3.0"
+transformers = "^4.40.2"
+ipyplot = "^1.1.2"
+anyio = "^4.3.0"
+pytest-asyncio = "^0.23.6"
+pytest-tornasync = "^0.6.0.post2"
+pytest-trio = "^0.8.0"
+pytest-twisted = "^1.14.1"
+twisted = "^24.3.0"
+service-identity = "^24.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.6.0"
+
+[tool.black]
+line-length = 90
+target-version = ["py311"]
+
+[tool.flake8]
+max-line-length = 90
+
+[tool.isort]
+src_paths = ["metricCalc", "retrieval"]
+profile = "black"
+line_length = 90
+lines_after_imports = 2
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
